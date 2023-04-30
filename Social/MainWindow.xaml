@@ -1,0 +1,28 @@
+﻿<Window x:Class="Social.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Social"
+        mc:Ignorable="d"
+        Background="#444444"
+        Title="Login" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="109*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="124*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Добро пожаловать!" VerticalAlignment="Center" FontSize="20px" Height="40" Width="180" Grid.ColumnSpan="2" Foreground="White" />
+        <TextBox x:Name="log" Text="Введите имя пользователя" VerticalAlignment="Center" Height="50px" Grid.Row="1" GotFocus="log_GotFocus" Width="450" Grid.ColumnSpan="2" TextChanged="log_TextChanged" Foreground="White"/>
+        <TextBox x:Name="IP" Text="Введите IP-адреc" VerticalAlignment="Center" Height="50px" Grid.Row="4" GotFocus="ip_GotFocus" Width="450" Grid.ColumnSpan="2" TextChanged="IP_TextChanged" Foreground="White"/>
+        <Button x:Name="button1" Content="Я хочу создать новый чат"  Grid.Row="2" VerticalAlignment="Center" Click="button1_Click" Height="30" Width="450" Grid.ColumnSpan="2" Background="White" Foreground="#FF444444" />
+        <Button x:Name="button2" Content="Я хочу подключиться" Grid.Row="3" VerticalAlignment="Center" Click="button2_Click" Height="30" Width="450" Grid.ColumnSpan="2" Background="White" Foreground="#FF444444"/>
+    </Grid>
+</Window>
